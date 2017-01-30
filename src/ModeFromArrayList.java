@@ -14,7 +14,7 @@ public class ModeFromArrayList {
 				numberMap.put(inputNumber, value);
 			}
 		}
-		
+		mode = numberMap.entrySet().stream().max((firstEntry, secondEntry) -> firstEntry.getValue() > secondEntry.getValue() ? 1 : -1).get().getKey();
 		return mode;
 	}
 	
